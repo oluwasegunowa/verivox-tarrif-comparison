@@ -4,10 +4,10 @@ Tarrif Comparison
 
 .NET Core 5.0
 
-Microservices
+Task description
 -----------------------------------------------
 
-Find below frameworks and tools used in the development;
+Find below desgin pattern, frameworks and tools used in executing the task given;
  
 1. Domain Driven Design & Reposiotry Pattern
 2. Documentation - Swagger
@@ -28,23 +28,21 @@ For the task, I tried to Keep It Simple by using folders to separate the layers.
 
 Assumptions
 -------------------------------------------
-1. Supplied Consumption must be greater than 0,
+1. Supplied Consumption must be greater than 0 (Exception is thrown if not)
 2. More products can be created in future
-To do that,  just implement ITarrifModel, provide the name and calculation. 
-
+To do that, implement ITarrifModel, provide the name and calculation for the new tarrif model. The follwing are the default Model
 
 - BasicConsumptionTarrif
 - PackagedConsumptionTarrif
 
+3. The product is to return Annual cost and tarrif name ( I will suggest, the consumption is also returned)
 
 
 
 
-
-Running Migrations on the database
+Setup: Check the followin to setup the project
 --------------------------------------
 1. Provide valid postgress database connection string and run the appliaction for the database to be automatically created.
-
 
 Host={Server_Here};user id={Database_User};password={Database_Password};database={Database_Name};Port=5432
 
@@ -66,6 +64,7 @@ dotnet run
 
 Running Test
 --------------------------------------
+A total of 9 test cases were written and all executed successfully.
 dotnet test 
 
 
