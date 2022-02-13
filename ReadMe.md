@@ -9,7 +9,7 @@ Task description
 
 Find below desgin pattern, frameworks and tools used in executing the task given;
  
-1. Domain Driven Design & Reposiotry Pattern
+1. Domain Driven Design & Repository Pattern
 2. Documentation - Swagger
 3. Logging - Serilog
 4. Database -  Postgress
@@ -20,13 +20,13 @@ Find below desgin pattern, frameworks and tools used in executing the task given
 Layers
 ---------------------------------------------
 For the task, I tried to Keep It Simple by using folders to separate the layers.
-1. Presentation -> Controllers, Views (if any)
-2. Application -> Business Logic
-3. Domain -> Global Error Handling, Extensions
-4. Infrastructure -> Database
+1. Presentation -> Controllers, Views (but none for this project)
+2. Application -> Business Use cases
+3. Domain -> Global Error Handling, Extensions, Entities etx
+4. Infrastructure -> Connection to database, third party integrations (none in this case)
 
 
-Assumptions
+Assumptions based on project understanding
 -------------------------------------------
 1. Supplied Consumption must be greater than 0 (Exception is thrown if not)
 2. More products can be created in future
@@ -40,7 +40,7 @@ To do that, implement ITarrifModel, provide the name and calculation for the new
 
 
 
-Setup: Check the followin to setup the project
+Setup: Check the following to setup the project
 --------------------------------------
 1. Provide valid postgress database connection string and run the appliaction for the database to be automatically created.
 
